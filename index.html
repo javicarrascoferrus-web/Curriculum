@@ -1,485 +1,364 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV - Javier Carrasco Ferrús</title>
 
-<title>CV - Javier Carrasco Ferrús</title>
+  <style>
+    :root {
+      --dark: #0f172a;
+      --blue: #2563eb;
+      --cyan: #38bdf8;
+      --text: #1e293b;
+      --muted: #64748b;
+      --bg: #f1f5f9;
+      --card: #ffffff;
+      --line: #e2e8f0;
+    }
 
-<style>
+    * {
+      box-sizing: border-box;
+    }
 
-:root{
-  --dark:#0f172a;
-  --blue:#2563eb;
-  --blue2:#1d4ed8;
-  --text:#1e293b;
-  --muted:#64748b;
-  --bg:#f1f5f9;
-  --card:#ffffff;
-  --line:#e2e8f0;
-}
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
 
-*{
-  box-sizing:border-box;
-}
+    .wrap {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 18px;
+    }
 
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-}
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+      color: white;
+      border-radius: 28px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+      margin-bottom: 24px;
+    }
 
-.wrap{
-  max-width:1100px;
-  margin:auto;
-  padding:30px 18px;
-}
+    .hero h1 {
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.1;
+    }
 
+    .subtitle {
+      margin: 10px 0 18px;
+      color: #dbeafe;
+      font-size: 18px;
+      font-weight: 500;
+    }
 
+    .hero p {
+      max-width: 650px;
+      line-height: 1.7;
+      color: #e0f2fe;
+      margin: 0 0 20px;
+    }
 
-.hero{
-  background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
-  border-radius:28px;
-  padding:40px;
-  color:white;
-  box-shadow:0 20px 45px rgba(15,23,42,.25);
-  margin-bottom:24px;
-}
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-.hero-content{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:35px;
-  flex-wrap:wrap;
-}
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      background: white;
+      color: var(--dark);
+    }
 
-.hero-text{
-  flex:1;
-  min-width:280px;
-}
+    .btn.secondary {
+      background: rgba(255,255,255,0.14);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.35);
+    }
 
-.hero h1{
-  margin:0;
-  font-size:44px;
-  line-height:1.1;
-}
+    .photo img {
+      width: 190px;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid white;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    }
 
-.subtitle{
-  margin:12px 0 18px;
-  color:#dbeafe;
-  font-size:18px;
-  font-weight:500;
-}
+    .grid {
+      display: grid;
+      grid-template-columns: 1.35fr .75fr;
+      gap: 22px;
+      align-items: start;
+    }
 
-.hero p{
-  line-height:1.8;
-  color:#e0f2fe;
-  max-width:650px;
-  margin-bottom:22px;
-}
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px;
+      margin-bottom: 22px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+    }
 
-.hero-photo{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
+    h2 {
+      margin: 0 0 16px;
+      color: var(--blue);
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+    }
 
+    h3 {
+      margin: 0 0 5px;
+      font-size: 18px;
+      color: var(--dark);
+    }
 
+    .meta {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+    }
 
+    ul {
+      margin: 8px 0 0 20px;
+      padding: 0;
+    }
 
-.buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
+    li {
+      margin: 7px 0;
+      line-height: 1.5;
+    }
 
-.btn{
-  display:inline-block;
-  padding:10px 15px;
-  border-radius:999px;
-  text-decoration:none;
-  font-size:14px;
-  font-weight:600;
-  background:white;
-  color:var(--dark);
-  transition:.2s;
-}
+    article {
+      border-left: 4px solid var(--blue);
+      padding-left: 14px;
+      margin-bottom: 18px;
+    }
 
-.btn:hover{
-  transform:translateY(-2px);
-}
+    article:last-child {
+      margin-bottom: 0;
+    }
 
-.btn.secondary{
-  background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.25);
-  color:white;
-}
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
 
+    .skill {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 14px;
+      font-weight: 600;
+    }
 
+    .info-list {
+      list-style: none;
+      margin: 0;
+    }
 
-.grid{
-  display:grid;
-  grid-template-columns:1.35fr .75fr;
-  gap:22px;
-  align-items:start;
-}
+    .info-list li {
+      padding: 9px 0;
+      border-bottom: 1px solid var(--line);
+    }
 
-@media(max-width:850px){
+    .info-list li:last-child {
+      border-bottom: 0;
+    }
 
-  .hero{
-    padding:30px;
-  }
+    .tag {
+      display: inline-block;
+      color: var(--blue);
+      font-weight: 700;
+      margin-right: 5px;
+    }
 
-  .hero-content{
-    flex-direction:column-reverse;
-    text-align:center;
-  }
+    
 
-  .buttons{
-    justify-content:center;
-  }
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
 
-  .grid{
-    grid-template-columns:1fr;
-  }
+      .photo {
+        order: -1;
+      }
 
-  .hero h1{
-    font-size:36px;
-  }
+      .buttons {
+        justify-content: center;
+      }
 
-}
+      .grid {
+        grid-template-columns: 1fr;
+      }
 
+      .hero h1 {
+        font-size: 34px;
+      }
+    }
 
+    @media print {
+      body {
+        background: white;
+      }
 
-.card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:22px;
-  padding:22px;
-  margin-bottom:22px;
-  box-shadow:0 10px 30px rgba(15,23,42,.06);
-}
+      .wrap {
+        padding: 0;
+      }
 
-h2{
-  margin:0 0 18px;
-  font-size:15px;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  color:var(--blue2);
-}
+      .hero,
+      .card {
+        box-shadow: none;
+      }
 
-h3{
-  margin:0 0 5px;
-  font-size:18px;
-  color:var(--dark);
-}
-
-.meta{
-  margin:0 0 10px;
-  color:var(--muted);
-  font-size:14px;
-  font-weight:500;
-}
-
-article{
-  border-left:4px solid var(--blue);
-  padding-left:14px;
-  margin-bottom:20px;
-}
-
-article:last-child{
-  margin-bottom:0;
-}
-
-ul{
-  margin:8px 0 0 20px;
-  padding:0;
-}
-
-li{
-  margin:7px 0;
-  line-height:1.6;
-}
-
-
-
-.skills{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.skill{
-  background:#eff6ff;
-  border:1px solid #bfdbfe;
-  color:#1d4ed8;
-  padding:8px 13px;
-  border-radius:999px;
-  font-size:14px;
-  font-weight:600;
-}
-
-  
-.info-list{
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-
-.info-list li{
-  padding:10px 0;
-  border-bottom:1px solid var(--line);
-}
-
-.info-list li:last-child{
-  border-bottom:0;
-}
-
-.tag{
-  color:var(--blue2);
-  font-weight:700;
-}
-
-
-
-
-@media print{
-
-  body{
-    background:white;
-  }
-
-  .hero,
-  .card{
-    box-shadow:none;
-  }
-
-}
-
-</style>
+      .btn {
+        border: 1px solid #ddd;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<main class="wrap">
+  <main class="wrap">
 
-
-
-  <section class="hero">
-
-    <div class="hero-content">
-
-      <div class="hero-text">
-
+    <section class="hero">
+      <div>
         <h1>Javier Carrasco Ferrús</h1>
-
-        <div class="subtitle">
-          Perfil orientado al sector informático
-        </div>
+        <div class="subtitle">Perfil orientado al sector informático</div>
 
         <p>
-          Responsable, organizado y con gran interés por el mundo de la informática.
-          Experiencia en almacén y gestión de mercancías.
-          Actualmente enfocado en seguir creciendo profesionalmente dentro del sector tecnológico.
+          Responsale, organizado y con gran interés por el mundo de la informática.
+          Experiencia en almacén y gestión de mercancías. Actualmente
+          enfocado en seguir creciendo profesionalmente dentro del sector tecnológico.
         </p>
 
+        <div class="buttons">
+          <a class="btn" href="mailto:javicarrascoferrus@gmail.com">Email</a>
+          <a class="btn secondary" href="tel:+34685573959">685 573 959</a>
         
-<div class="contact-box">
-
-  <a class="contact-item"
-     href="mailto:javicarrascoferrus@gmail.com">
-
-    <span class="contact-label">
-      Email
-    </span>
-
-    <span class="contact-value">
-      javicarrascoferrus@gmail.com
-    </span>
-
-  </a>
-
-  <a class="contact-item"
-     href="tel:+34685573959">
-
-    <span class="contact-label">
-      Teléfono
-    </span>
-
-    <span class="contact-value">
-      685 573 959
-    </span>
-
-  </a>
-
-</div>
-
-
-      <div class="hero-photo">
-        <img src="FotoJavi.png"
-             alt="Foto de Javier Carrasco">
+        </div>
       </div>
 
+      <div class="photo">
+        <img src="FotoJavi.png" alt="Foto de Javier Carrasco">
+      </div>
+    </section>
+
+    <div class="grid">
+
+      <div>
+        <section class="card">
+          <h2>Experiencia laboral</h2>
+
+          <article>
+            <h3>Consum Cooperativa — Operario de almacén</h3>
+            <p class="meta">Mayo 2018 – Actualidad</p>
+            <ul>
+              <li>Carga y descarga de mercancías.</li>
+              <li>Conducción de montacargas y maquinaria de almacén.</li>
+              <li>Etiquetado y paletizado de productos para venta y envío.</li>
+              <li>Organización de mercancía y mantenimiento del orden en el área de trabajo.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Infotourist Alzira — Oficina de Turismo</h3>
+            <p class="meta">Marzo 2017 – Junio 2017</p>
+            <ul>
+              <li>Administración y gestión de inventario.</li>
+              <li>Atención e información turística a usuarios y visitantes.</li>
+              <li>Resolución de dudas, incidencias y quejas de clientes.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="card">
+          <h2>Aptitudes profesionales</h2>
+          <ul>
+            <li>Gran vocación por el mundo de la informática.</li>
+            <li>Facilidad de aprendizaje y adaptación.</li>
+            <li>Resolución de problemas y alta responsabilidad.</li>
+            <li>Organización y atención al detalle.</li>
+            <li>Trabajo en equipo.</li>
+          </ul>
+        </section>
+      </div>
+
+      <aside>
+        <section class="card">
+          <h2>Formación</h2>
+
+          <article>
+            <h3>Educación Secundaria Obligatoria</h3>
+            <p class="meta">IES José María Parra — Alzira</p>
+          </article>
+
+          <article>
+            <h3>FP Grado Medio: Sistemas Microinformáticos y Redes</h3>
+            <p class="meta">TAME Centro de Formación Profesional — Mislata</p>
+          </article>
+        </section>
+
+        <section class="card">
+          <h2>Conocimientos informáticos</h2>
+          <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">PHP</span>
+            <span class="skill">Python</span>
+            <span class="skill">GitHub</span>
+            <span class="skill">VS Code</span>
+            <span class="skill">Windows</span>
+          
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Idiomas</h2>
+          <ul class="info-list">
+            <li><span class="tag">Español:</span> Nativo</li>
+            <li><span class="tag">Inglés:</span> Básico / Intermedio</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Otros datos</h2>
+          <ul class="info-list">
+            <li>Carnet de conducir.</li>
+            <li>Coche propio.</li>
+            <li>Disponibilidad para viajar.</li>
+            <li>Incorporación inmediata.</li>
+            <li>Disponibilidad horaria completa.</li>
+          </ul>
+        </section>
+      </aside>
+
     </div>
 
-  </section>
 
-  <!-- CONTENT -->
-
-  <div class="grid">
-
-
-
-    <div>
-
-      <section class="card">
-
-        <h2>Experiencia laboral</h2>
-
-        <article>
-
-          <h3>Consum Cooperativa — Operario de almacén</h3>
-
-          <p class="meta">
-            Mayo 2018 – Actualidad
-          </p>
-
-          <ul>
-            <li>Carga y descarga de mercancías.</li>
-            <li>Conducción de montacargas y maquinaria de almacén.</li>
-            <li>Etiquetado y paletizado de productos para venta y envío.</li>
-            <li>Organización de mercancía y mantenimiento del orden.</li>
-          </ul>
-
-        </article>
-
-        <article>
-
-          <h3>Infotourist Alzira — Oficina de Turismo</h3>
-
-          <p class="meta">
-            Marzo 2017 – Junio 2017
-          </p>
-
-          <ul>
-            <li>Administración y gestión de inventario.</li>
-            <li>Atención e información turística.</li>
-            <li>Resolución de incidencias y atención al cliente.</li>
-          </ul>
-
-        </article>
-
-      </section>
-
-      <section class="card">
-
-        <h2>Aptitudes profesionales</h2>
-
-        <ul>
-          <li>Gran vocación por el mundo de la informática.</li>
-          <li>Facilidad de aprendizaje y adaptación.</li>
-          <li>Resolución de problemas y alta responsabilidad.</li>
-          <li>Organización y atención al detalle.</li>
-          <li>Trabajo en equipo.</li>
-        </ul>
-
-      </section>
-
-    </div>
-
-
-    <aside>
-
-      <section class="card">
-
-        <h2>Formación</h2>
-
-        <article>
-
-          <h3>Educación Secundaria Obligatoria</h3>
-
-          <p class="meta">
-            IES José María Parra — Alzira
-          </p>
-
-        </article>
-
-        <article>
-
-          <h3>FP Grado Medio: Sistemas Microinformáticos y Redes</h3>
-
-          <p class="meta">
-            TAME Centro de Formación Profesional — Mislata
-          </p>
-
-        </article>
-
-      </section>
-
-      <section class="card">
-
-        <h2>Conocimientos informáticos</h2>
-
-        <div class="skills">
-
-          <span class="skill">HTML</span>
-          <span class="skill">CSS</span>
-          <span class="skill">PHP</span>
-          <span class="skill">Python</span>
-          <span class="skill">GitHub</span>
-          <span class="skill">VS Code</span>
-          <span class="skill">Windows</span>
-          <span class="skill">Ofimática</span>
-
-        </div>
-
-      </section>
-
-      <section class="card">
-
-        <h2>Idiomas</h2>
-
-        <ul class="info-list">
-
-          <li>
-            <span class="tag">Español:</span>
-            Nativo
-          </li>
-
-          <li>
-            <span class="tag">Inglés:</span>
-            Básico / Intermedio
-          </li>
-
-        </ul>
-
-      </section>
-
-      <section class="card">
-
-        <h2>Otros datos</h2>
-
-        <ul class="info-list">
-
-          <li>Carnet de conducir.</li>
-          <li>Coche propio.</li>
-          <li>Disponibilidad para viajar.</li>
-          <li>Incorporación inmediata.</li>
-          <li>Disponibilidad horaria completa.</li>
-
-        </ul>
-
-      </section>
-
-    </aside>
-
-  </div>
-
-  
-
-</main>
+  </main>
 
 </body>
 </html>

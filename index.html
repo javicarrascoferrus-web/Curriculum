@@ -1,18 +1,20 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CV - Javier Carrasco Ferrús</title>
 
   <style>
     :root {
-      --ink: #0f172a;
-      --muted: #475569;
-      --line: #e2e8f0;
-      --bg: #f8fafc;
+      --dark: #0f172a;
+      --blue: #2563eb;
+      --cyan: #38bdf8;
+      --text: #1e293b;
+      --muted: #64748b;
+      --bg: #f1f5f9;
       --card: #ffffff;
-      --primary: #1e3a8a;
+      --line: #e2e8f0;
     }
 
     * {
@@ -20,166 +22,268 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--ink);
-      background: var(--bg);
       margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
 
     .wrap {
-      max-width: 950px;
-      margin: 0 auto;
-      padding: 28px 18px;
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 18px;
     }
 
-    header {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 22px;
-      margin-bottom: 18px;
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+      color: white;
+      border-radius: 28px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+      margin-bottom: 24px;
     }
 
-    h1 {
-      margin: 0 0 8px;
-      font-size: 32px;
-      color: var(--primary);
+    .hero h1 {
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.1;
     }
 
-    .contact {
+    .subtitle {
+      margin: 10px 0 18px;
+      color: #dbeafe;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .hero p {
+      max-width: 650px;
+      line-height: 1.7;
+      color: #e0f2fe;
+      margin: 0 0 20px;
+    }
+
+    .buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px 18px;
-      color: var(--muted);
-      font-size: 14px;
+      gap: 10px;
     }
 
-    .contact a {
-      color: inherit;
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
       text-decoration: none;
-      border-bottom: 1px dotted var(--line);
+      font-weight: 600;
+      font-size: 14px;
+      background: white;
+      color: var(--dark);
+    }
+
+    .btn.secondary {
+      background: rgba(255,255,255,0.14);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.35);
+    }
+
+    .photo img {
+      width: 190px;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid white;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.35);
     }
 
     .grid {
       display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 18px;
+      grid-template-columns: 1.35fr .75fr;
+      gap: 22px;
       align-items: start;
     }
 
-    @media (max-width: 720px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    section {
+    .card {
       background: var(--card);
       border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px;
-      margin-bottom: 18px;
+      border-radius: 22px;
+      padding: 22px;
+      margin-bottom: 22px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
     }
 
     h2 {
-      margin: 0 0 12px;
-      font-size: 15px;
+      margin: 0 0 16px;
+      color: var(--blue);
+      font-size: 16px;
       text-transform: uppercase;
-      letter-spacing: .08em;
-      color: var(--primary);
+      letter-spacing: .09em;
     }
 
     h3 {
-      margin: 12px 0 4px;
-      font-size: 16px;
+      margin: 0 0 5px;
+      font-size: 18px;
+      color: var(--dark);
     }
 
     .meta {
+      margin: 0 0 10px;
       color: var(--muted);
-      font-size: 13px;
-      margin: 0 0 8px;
-    }
-
-    p {
-      line-height: 1.6;
-      margin: 0;
+      font-size: 14px;
+      font-weight: 500;
     }
 
     ul {
-      margin: 6px 0 0 18px;
+      margin: 8px 0 0 20px;
       padding: 0;
     }
 
     li {
-      margin: 5px 0;
+      margin: 7px 0;
       line-height: 1.5;
     }
 
-    .pillrow {
+    article {
+      border-left: 4px solid var(--blue);
+      padding-left: 14px;
+      margin-bottom: 18px;
+    }
+
+    article:last-child {
+      margin-bottom: 0;
+    }
+
+    .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 9px;
     }
 
-    .pill {
-      border: 1px solid var(--line);
-      background: #f8fafc;
+    .skill {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
       border-radius: 999px;
-      padding: 7px 11px;
-      font-size: 13px;
+      padding: 8px 12px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .info-list {
+      list-style: none;
+      margin: 0;
+    }
+
+    .info-list li {
+      padding: 9px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .info-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .tag {
+      display: inline-block;
+      color: var(--blue);
+      font-weight: 700;
+      margin-right: 5px;
+    }
+
+    footer {
+      text-align: center;
       color: var(--muted);
+      font-size: 13px;
+      margin-top: 18px;
     }
 
-    .photo {
-      display: flex;
-      justify-content: center;
-      padding: 18px;
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .photo {
+        order: -1;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
     }
 
-    .photo img {
-      width: 180px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 16px;
-      border: 3px solid var(--line);
+    @media print {
+      body {
+        background: white;
+      }
+
+      .wrap {
+        padding: 0;
+      }
+
+      .hero,
+      .card {
+        box-shadow: none;
+      }
+
+      .btn {
+        border: 1px solid #ddd;
+      }
     }
   </style>
 </head>
 
 <body>
+
   <main class="wrap">
 
-    <header>
-      <h1>Javier Carrasco Ferrús</h1>
+    <section class="hero">
+      <div>
+        <h1>Javier Carrasco Ferrús</h1>
+        <div class="subtitle">Perfil orientado al sector informático</div>
 
-      <div class="contact">
-        <span><strong>Tel:</strong> <a href="tel:+34685573959">685 573 959</a></span>
-        <span><strong>Email:</strong> <a href="mailto:javicarrascoferrus@gmail.com">javicarrascoferrus@gmail.com</a></span>
+        <p>
+          Persona responsable, organizada y con gran interés por el mundo de la informática.
+          Experiencia en almacén, gestión de mercancías y atención al cliente. Actualmente
+          enfocado en seguir creciendo profesionalmente dentro del sector tecnológico.
+        </p>
+
+        <div class="buttons">
+          <a class="btn" href="mailto:javicarrascoferrus@gmail.com">Email</a>
+          <a class="btn secondary" href="tel:+34685573959">685 573 959</a>
+          <a class="btn secondary" href="https://github.com/" target="_blank">GitHub</a>
+        </div>
       </div>
-    </header>
+
+      <div class="photo">
+        <img src="FotoJavi.png" alt="Foto de Javier Carrasco">
+      </div>
+    </section>
 
     <div class="grid">
 
       <div>
-        <section>
-          <h2>Perfil profesional</h2>
-          <p>
-            Persona responsable, organizada y con gran interés por el mundo de la informática.
-            Experiencia en almacén, gestión de mercancías y atención al cliente. Actualmente
-            orientado al desarrollo profesional en el sector informático.
-          </p>
-        </section>
-
-        <section>
-          <h2>Historial laboral</h2>
+        <section class="card">
+          <h2>Experiencia laboral</h2>
 
           <article>
             <h3>Consum Cooperativa — Operario de almacén</h3>
             <p class="meta">Mayo 2018 – Actualidad</p>
             <ul>
               <li>Carga y descarga de mercancías.</li>
-              <li>Conducción de montacargas y maquinaria para carga y descarga de mercancías.</li>
-              <li>Etiquetado y paletizado de productos para la venta y envío.</li>
+              <li>Conducción de montacargas y maquinaria de almacén.</li>
+              <li>Etiquetado y paletizado de productos para venta y envío.</li>
               <li>Organización de mercancía y mantenimiento del orden en el área de trabajo.</li>
             </ul>
           </article>
@@ -189,14 +293,14 @@
             <p class="meta">Marzo 2017 – Junio 2017</p>
             <ul>
               <li>Administración y gestión de inventario.</li>
-              <li>Suministro de información turística a usuarios y visitantes.</li>
+              <li>Atención e información turística a usuarios y visitantes.</li>
               <li>Resolución de dudas, incidencias y quejas de clientes.</li>
             </ul>
           </article>
         </section>
 
-        <section>
-          <h2>Aptitudes</h2>
+        <section class="card">
+          <h2>Aptitudes profesionales</h2>
           <ul>
             <li>Gran vocación por el mundo de la informática.</li>
             <li>Facilidad de aprendizaje y adaptación.</li>
@@ -208,11 +312,7 @@
       </div>
 
       <aside>
-        <section class="photo">
-          <img src="FotoJavi.png" alt="Foto de Javier Carrasco">
-        </section>
-
-        <section>
+        <section class="card">
           <h2>Formación</h2>
 
           <article>
@@ -226,30 +326,31 @@
           </article>
         </section>
 
-        <section>
+        <section class="card">
           <h2>Conocimientos informáticos</h2>
-          <div class="pillrow">
-            <span class="pill">HTML</span>
-            <span class="pill">CSS</span>
-            <span class="pill">PHP</span>
-            <span class="pill">Python</span>
-            <span class="pill">GitHub</span>
-            <span class="pill">VS Code</span>
+          <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">PHP</span>
+            <span class="skill">Python</span>
+            <span class="skill">GitHub</span>
+            <span class="skill">VS Code</span>
+            <span class="skill">Windows</span>
+            <span class="skill">Ofimática</span>
           </div>
         </section>
 
-        <section>
+        <section class="card">
           <h2>Idiomas</h2>
-          <div class="pillrow">
-            <span class="pill">Español</span>
-            <span class="pill">Inglés</span>
-          </div>
+          <ul class="info-list">
+            <li><span class="tag">Español:</span> Nativo</li>
+            <li><span class="tag">Inglés:</span> Básico / Intermedio</li>
+          </ul>
         </section>
 
-        <section>
+        <section class="card">
           <h2>Otros datos</h2>
-          <ul>
-            <li>Conocimientos avanzados de informática.</li>
+          <ul class="info-list">
             <li>Carnet de conducir.</li>
             <li>Coche propio.</li>
             <li>Disponibilidad para viajar.</li>
@@ -260,6 +361,12 @@
       </aside>
 
     </div>
+
+    <footer>
+      CV web desarrollado en HTML y CSS
+    </footer>
+
   </main>
+
 </body>
 </html>

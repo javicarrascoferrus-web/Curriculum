@@ -1,2 +1,2 @@
-(https://javicarrascoferrus-web.github.io/)
-https://Curriculum/
+
+(https://javicarrascoferrus-web.github.io/Curriculum/)

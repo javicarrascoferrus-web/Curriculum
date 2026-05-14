@@ -1,2 +1,1 @@
-
-(https://javicarrascoferrus-web.github.io/Curriculum/)
+CV: https://javicarrascoferrus-web.github.io/Curriculum/
